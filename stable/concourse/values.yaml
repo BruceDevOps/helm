@@ -8,12 +8,13 @@
 
 ## Concourse image.
 ##
-image: concourse/concourse
+# image: concourse/concourse
+image: 586597079952.dkr.ecr.us-west-2.amazonaws.com/go-prod-concourse
 
 ## Concourse image version.
 ## ref: https://hub.docker.com/r/concourse/concourse/tags/
 ##
-imageTag: "3.14.1"
+imageTag: "latest"
 
 ## Specify a imagePullPolicy: 'Always' if imageTag is 'latest', else set to 'IfNotPresent'.
 ## ref: https://kubernetes.io/docs/user-guide/images/#pre-pulling-images
@@ -245,7 +246,7 @@ web:
     ## For minikube, set this to ClusterIP, elsewhere use LoadBalancer or NodePort
     ## ref: https://kubernetes.io/docs/user-guide/services/#publishing-services---service-types
     ##
-    type: ClusterIP
+    type: 100.64.0.1
 
     ## When using web.service.type: LoadBalancer, sets the user-specified load balancer IP
     # loadBalancerIP: 172.217.1.174
